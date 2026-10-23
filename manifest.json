@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.f0tia.mesh-chat",
+  "name": "Mesh Chat",
+  "version": "0.1.0",
+  "author": "F0tia",
+  "license": "MIT",
+  "description": "Send and receive Meshtastic or MeshCore text messages from the Omarchy bar, over USB serial, TCP/Wi-Fi or Bluetooth LE.",
+  "homepage": "https://github.com/F0tia/omarchy-mesh-chat",
+  "repository": "https://github.com/F0tia/omarchy-mesh-chat.git",
+  "keywords": [
+    "meshtastic",
+    "meshcore",
+    "lora",
+    "ham",
+    "radio",
+    "mesh",
+    "chat"
+  ],
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Mesh Chat",
+    "description": "Chat over a Meshtastic or MeshCore LoRa radio",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "protocol": "meshtastic",
+      "transport": "serial",
+      "address": "",
+      "notify": true
+    },
+    "schema": [
+      {
+        "key": "protocol",
+        "type": "enum",
+        "label": "Protocol",
+        "options": [
+          "meshtastic",
+          "meshcore"
+        ],
+        "defaultValue": "meshtastic"
+      },
+      {
+        "key": "transport",
+        "type": "enum",
+        "label": "Connection",
+        "options": [
+          "serial",
+          "tcp",
+          "ble"
+        ],
+        "defaultValue": "serial"
+      },
+      {
+        "key": "address",
+        "type": "string",
+        "label": "Address",
+        "defaultValue": "",
+        "description": "Serial device (blank = auto-detect), host or host:port for TCP, or a BLE MAC address."
+      },
+      {
+        "key": "notify",
+        "type": "boolean",
+        "label": "Notify on new messages",
+        "defaultValue": true
+      }
+    ]
+  }
+}
