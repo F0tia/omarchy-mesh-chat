@@ -22,7 +22,7 @@ Send and receive Meshtastic or MeshCore text messages from the Omarchy bar.
 ## Install
 
 ```bash
-omarchy plugin add https://github.com/F0tia/omarchy-mesh-chat.git --enable
+omarchy plugin add https://github.com/KI6UIT/omarchy-mesh-chat.git --enable
 ```
 
 Then:
