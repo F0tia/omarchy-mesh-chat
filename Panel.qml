@@ -9,8 +9,8 @@ import qs.Ui
 
 Panel {
   id: root
-  moduleName: "io.github.f0tia.mesh-chat"
-  ipcTarget: "io.github.f0tia.mesh-chat"
+  moduleName: "io.github.ki6uit.mesh-chat"
+  ipcTarget: "io.github.ki6uit.mesh-chat"
   manageIpc: false
 
   readonly property color foreground: bar ? bar.foreground : Commons.Color.foreground

@@ -28,7 +28,7 @@ omarchy plugin add https://github.com/KI6UIT/omarchy-mesh-chat.git --enable
 Then:
 
 1. Click the radio icon in the bar and choose **Install libraries**, or run
-   `~/.config/omarchy/plugins/io.github.f0tia.mesh-chat/bin/mesh-setup`.
+   `~/.config/omarchy/plugins/io.github.ki6uit.mesh-chat/bin/mesh-setup`.
    This creates `~/.local/share/omarchy-mesh/venv` and installs the Python packages there.
    It never uses sudo and doesn't touch system Python.
 2. For USB radios, add yourself to the `uucp` group, then **log out and back in**:
@@ -52,7 +52,7 @@ computer never sees it.
 ## Remove
 
 ```bash
-omarchy plugin remove io.github.f0tia.mesh-chat
+omarchy plugin remove io.github.ki6uit.mesh-chat
 rm -rf ~/.local/share/omarchy-mesh   # Python venv
 rm -rf ~/.local/state/omarchy-mesh   # message history and daemon log
 ```
@@ -82,9 +82,9 @@ It doesn't modify your Omarchy or radio configuration.
 ## IPC
 
 ```bash
-qs ipc -c /usr/share/omarchy/shell call io.github.f0tia.mesh-chat toggle
-qs ipc -c /usr/share/omarchy/shell call io.github.f0tia.mesh-chat status
-qs ipc -c /usr/share/omarchy/shell call io.github.f0tia.mesh-chat send ch:0 "Net check-in"
+qs ipc -c /usr/share/omarchy/shell call io.github.ki6uit.mesh-chat toggle
+qs ipc -c /usr/share/omarchy/shell call io.github.ki6uit.mesh-chat status
+qs ipc -c /usr/share/omarchy/shell call io.github.ki6uit.mesh-chat send ch:0 "Net check-in"
 ```
 
 ## License
